@@ -101,3 +101,10 @@ footer {
   color: #fa440d; /* laranja */
   font-weight: 600;
 }
+
+.logo {
+  width: 50px; /* ajuste conforme o tamanho da logo */
+  height: 50px; /* importante deixar altura igual à largura */
+  object-fit: cover; /* evita distorcer a imagem */
+  border-radius: 50%; /* deixa totalmente redondo */
+}
