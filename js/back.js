@@ -139,6 +139,17 @@ document.getElementById("formAcai").addEventListener("submit", (e) => {
   e.target.reset();
 });
 
+function updateCartCount() {
+  const cartCount = document.getElementById("cart-count");
+  let totalItems = 0;
+
+  carrinho.forEach((item) => {
+    totalItems += item.quantidade; // soma todas as quantidades
+  });
+
+  cartCount.textContent = totalItems;
+}
+
 function atualizarCarrinho() {
   const lista = document.getElementById("listaCarrinho");
   lista.innerHTML = "";
@@ -161,12 +172,16 @@ function atualizarCarrinho() {
   // Atualiza totais
   const total = subtotal + TAXA_ENTREGA;
   document.getElementById("totalCarrinho").textContent = total.toFixed(2);
+
+  updateCartCount(); // atualiza o número de itens
 }
 
 function removerItem(idx) {
   carrinho.splice(idx, 1);
   localStorage.setItem("carrinho", JSON.stringify(carrinho));
   atualizarCarrinho();
+
+  updateCartCount(); // atualiza o número de itens
 }
 
 function esvaziarCarrinho() {
