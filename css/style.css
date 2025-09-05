@@ -1,0 +1,56 @@
+body {
+  background-color: #c9b1be;
+  background-image: url("https://i.imgur.com/N1GmlmA.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+.overlay {
+  background-color: rgba(226, 214, 214, 0.9);
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: #6a1b9a !important;
+}
+.card {
+  border-radius: 1rem;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+h1,
+h2,
+h4 {
+  color: #4a148c;
+}
+footer {
+  background-color: #4a148c;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+.btn-success {
+  background-color: #6a1b9a;
+  border: none;
+}
+.btn-success:hover {
+  background-color: #4a148c;
+}
+.btn-primary {
+  background-color: #8e24aa;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #6a1b9a;
+}
+.btn-danger {
+  background-color: #d81b60;
+  border: none;
+}
+.btn-danger:hover {
+  background-color: #ad1457;
+}
