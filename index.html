@@ -26,21 +26,6 @@
               <li class="nav-item">
                 <a class="nav-link" href="#pedido">Fazer Pedido</a>
               </li>
-              <li class="nav-item">
-                <a
-                  href="#carrinho"
-                  id="cart-btn"
-                  class="nav-link position-relative"
-                >
-                  <i class="bi bi-cart-fill fs-4"></i>
-                  <span
-                    id="cart-count"
-                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-                  >
-                    0
-                  </span>
-                </a>
-              </li>
             </ul>
           </div>
         </div>
@@ -122,6 +107,15 @@
         <p>© 2025 Açaí Delivery - Todos os direitos reservados</p>
         <p>Desenvolvido por SoftNest</p>
       </footer>
+    </div>
+
+    <!-- Botão flutuante do carrinho -->
+    <div
+      id="cart-float"
+      onclick="document.getElementById('carrinho').scrollIntoView({behavior:'smooth'})"
+    >
+      <i class="bi bi-cart-fill"></i>
+      <span id="cart-count">0</span>
     </div>
 
     <script src="js/back.js"></script>

@@ -108,3 +108,39 @@ footer {
   object-fit: cover; /* evita distorcer a imagem */
   border-radius: 50%; /* deixa totalmente redondo */
 }
+
+/* Botão flutuante do carrinho */
+#cart-float {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: #8c26cc;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  z-index: 1100;
+}
+
+#cart-float:hover {
+  background: #5718a5;
+}
+
+/* contador de itens no botão flutuante */
+#cart-float #cart-count {
+  position: absolute;
+  top: 5px;
+  right: 7px;
+  background: red;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 2px 7px;
+}
