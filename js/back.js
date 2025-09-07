@@ -144,7 +144,7 @@ function updateCartCount() {
   let totalItems = 0;
 
   carrinho.forEach((item) => {
-    totalItems += item.quantidade; // soma todas as quantidades
+    totalItems += item.quantidade;
   });
 
   cartCount.textContent = totalItems;
@@ -169,19 +169,16 @@ function atualizarCarrinho() {
     )} <button class='btn btn-sm btn-danger ms-2' onclick='removerItem(${idx})'>Remover</button></div>`;
   });
 
-  // Atualiza totais
   const total = subtotal + TAXA_ENTREGA;
   document.getElementById("totalCarrinho").textContent = total.toFixed(2);
 
-  updateCartCount(); // atualiza o número de itens
+  updateCartCount();
 }
 
 function removerItem(idx) {
   carrinho.splice(idx, 1);
   localStorage.setItem("carrinho", JSON.stringify(carrinho));
   atualizarCarrinho();
-
-  updateCartCount(); // atualiza o número de itens
 }
 
 function esvaziarCarrinho() {
@@ -209,7 +206,6 @@ function enviarWhatsapp() {
 
   window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${msg}`, "_blank");
 
-  // Limpar carrinho após finalizar
   carrinho = [];
   atualizarCarrinho();
 }

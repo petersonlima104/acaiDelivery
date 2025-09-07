@@ -19,7 +19,7 @@
     <div class="overlay">
       <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
         <div class="container-fluid">
-          <img src="img/logo.png" alt="Logo Unic Açaí" class="logo me-2" />
+          <img src="img/logo.png" alt="Logo MV Açaí" class="logo me-2" />
           <a class="navbar-brand" href="#">MV Açaí Delivery</a>
           <div class="collapse navbar-collapse">
             <ul class="navbar-nav ms-auto">
@@ -90,19 +90,6 @@
         </div>
       </div>
 
-      <div class="container my-5" id="carrinho">
-        <h2 class="mb-4">Carrinho</h2>
-        <div id="listaCarrinho" class="mb-3"></div>
-        <h5>Taxa de entrega: R$ <span id="taxaEntrega">6,00</span></h5>
-        <h4>Total: R$ <span id="totalCarrinho">0,00</span></h4>
-        <button class="btn btn-danger me-2" onclick="esvaziarCarrinho()">
-          Esvaziar Carrinho
-        </button>
-        <button class="btn btn-primary" onclick="enviarWhatsapp()">
-          Fazer Pedido no WhatsApp
-        </button>
-      </div>
-
       <footer>
         <p>© 2025 Açaí Delivery - Todos os direitos reservados</p>
         <p>Desenvolvido por SoftNest</p>
@@ -112,12 +99,46 @@
     <!-- Botão flutuante do carrinho -->
     <div
       id="cart-float"
-      onclick="document.getElementById('carrinho').scrollIntoView({behavior:'smooth'})"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasCarrinho"
+      aria-controls="offcanvasCarrinho"
     >
       <i class="bi bi-cart-fill"></i>
       <span id="cart-count">0</span>
     </div>
 
+    <!-- Offcanvas Carrinho -->
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvasCarrinho"
+      aria-labelledby="offcanvasCarrinhoLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasCarrinhoLabel">🛒 Carrinho</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <div id="listaCarrinho" class="mb-3"></div>
+        <h5>Taxa de entrega: R$ <span id="taxaEntrega">6,00</span></h5>
+        <h4>Total: R$ <span id="totalCarrinho">0,00</span></h4>
+        <div class="mt-3">
+          <button class="btn btn-danger me-2" onclick="esvaziarCarrinho()">
+            Esvaziar Carrinho
+          </button>
+          <button class="btn btn-primary" onclick="enviarWhatsapp()">
+            Fazer Pedido no WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/back.js"></script>
   </body>
 </html>
